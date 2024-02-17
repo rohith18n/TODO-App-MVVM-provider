@@ -53,6 +53,7 @@ class SignUpController extends ChangeNotifier {
         passwordController.text,
         passwordConfirmController.text,
       );
+      onClose();
 
       ScaffoldMessenger.of(context)
           .removeCurrentSnackBar(); // Remove the loading snackbar
@@ -95,5 +96,6 @@ class SignUpController extends ChangeNotifier {
   void onClose() {
     emailController.clear();
     passwordController.clear();
+    notifyListeners();
   }
 }

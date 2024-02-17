@@ -31,26 +31,6 @@ class LoginController extends ChangeNotifier {
     });
   }
 
-  // void loginUser() async {
-  //   showLoading = true;
-  //   notifyListeners();
-  //   String? errorMessage = await AuthenticationRemote().login(
-  //     emailController.text,
-  //     passwordController.text,
-  //   );
-
-  //   if (errorMessage == null) {
-  //     showLoading = false;
-  //     notifyListeners();
-
-  //     // Login successful, navigate to the next screen or perform any other action
-  //   } else {
-  //     // Error occurred, print the error message
-  //     showLoading = false;
-  //     notifyListeners();
-  //     log(errorMessage);
-  //   }
-  // }
   void loginUser(BuildContext context) async {
     if (loginKey.currentState!.validate()) {
       ScaffoldMessenger.of(context)
@@ -66,6 +46,7 @@ class LoginController extends ChangeNotifier {
         emailController.text,
         passwordController.text,
       );
+      onClose();
 
       ScaffoldMessenger.of(context)
           .removeCurrentSnackBar(); // Remove the loading snackbar
@@ -108,5 +89,6 @@ class LoginController extends ChangeNotifier {
   void onClose() {
     emailController.clear();
     passwordController.clear();
+    notifyListeners();
   }
 }
