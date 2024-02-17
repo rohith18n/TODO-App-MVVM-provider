@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "331607979176",
+    "project_id": "insta-clone-e72f8",
+    "storage_bucket": "insta-clone-e72f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331607979176:android:d278706133865473827e9d",
+        "android_client_info": {
+          "package_name": "com.example.towner_final_round"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAeWqt16CUQG0_J4uDRoMYQjnQSLESfZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
